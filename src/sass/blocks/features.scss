@@ -1,0 +1,134 @@
+.features {
+  padding: 60px 0 70px;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include laptop {
+    padding: 105px 0 188px;
+  }
+
+  @include desktop {
+    padding: 100px 0 230px;
+  }
+}
+
+.features__title {
+  margin: 0 0 32px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+
+  @include tablet {
+    margin: 0 0 40px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+.features__item {
+  position: relative;
+  margin-bottom: 32px;
+  font-family: var(--poppins-font);
+  min-height: 296px;
+  color: var(--text-color);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 296px;
+    height: 189px;
+    margin-bottom: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include laptop {
+      position: absolute;
+      right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 75px;
+  }
+  
+  @include laptop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 508px;
+  }
+}
+
+.features__item--increase {
+  &::before {
+    background-image: url("../assets/img/features-image-1.svg");
+  }
+
+  @include tablet {
+    &::before {
+      width: 360px;
+      height: 230px;
+    }
+  }
+}
+
+.features__item--risk-management {
+  &::before {
+    background-image: url("../assets/img/features-image-2.svg");
+  }
+
+  @include tablet {
+    &::before {
+      width: 364px;
+      height: 233px;
+    }
+  }
+
+  @include laptop {
+    padding: 0 0 0 508px;
+
+    &::before {
+      left: 0;
+      right: unset;
+    }
+  }
+}
+
+.features__item--reducing {
+  &::before {
+    background-image: url("../assets/img/features-image-3.svg");
+  }
+
+  @include tablet {
+    &::before {
+      width: 360px;
+      height: 195px;
+    }
+  }
+}
+
+.features__item-title {
+  margin: 0 0 12px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 37px;
+  
+  @include laptop {
+    max-width: 500px;
+  }
+}
+
+.features__item-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

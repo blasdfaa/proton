@@ -1,0 +1,117 @@
+.scope {
+  background-color: var(--section-bg);
+  padding: 50px 0 60px;
+}
+
+.scope__title {
+  font-family: var(--rubik-font);
+  margin: 0 0 73px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: var(--text-color);
+  grid-column: 1 / -1;
+
+  @include laptop {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+}
+
+.scope__wrapper {
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    align-items: start;
+    column-gap: 24px;
+  }
+
+  @include laptop {
+    grid-template-columns: repeat(3, 328px);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 376px);
+  }
+}
+
+.scope__item {
+  position: relative;
+  color: var(--text-color);
+  font-family: var(--poppins-font);
+  padding: 60px 20px 40px 24px;
+  box-shadow: var(--scope-block-shadow);
+
+  @include laptop {
+    max-width: 376px;
+  }
+
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 24px;
+    width: 81px;
+    height: 81px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-white);
+    box-shadow: var(--scope-icon-shadow);
+  }
+}
+
+.scope__item--trends {
+  &::before {
+    background-image: url("../assets/icons/icon-trends.svg");
+  }
+}
+
+.scope__item--profit {
+  &::before {
+    background-image: url("../assets/icons/icon-profit.svg");
+  }
+}
+
+.scope__item--volatility {
+  &::before {
+    background-image: url("../assets/icons/icon-volatility.svg");
+  }
+}
+
+.scope__item--levels {
+  &::before {
+    background-image: url("../assets/icons/icon-levels.svg");
+  }
+}
+
+.scope__item--view {
+  &::before {
+    background-image: url("../assets/icons/icon-view.svg");
+  }
+}
+
+.scope__paragraph {
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.scope__lead {
+  margin: 0 0 5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+}
+
+.scope__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}

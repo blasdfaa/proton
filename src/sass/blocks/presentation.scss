@@ -1,0 +1,83 @@
+.presentation {
+  position: relative;
+  padding: 74px 0;
+  font-family: var(--rubik-font);
+  background-color: var(--presentation-bg);
+  color: var(--color-white);
+  background-image: url("../assets/img/presentation-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right -301px;
+
+  @include tablet {
+    padding: 44px 0;
+    margin-bottom: 53px;
+  }
+
+  @include laptop {
+    padding: 60px 0;
+    margin-bottom: 70px;
+  }
+
+  @include desktop {
+    padding: 88px 0;
+    margin-bottom: 95px;
+  }
+}
+
+.presentation__title {
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+
+  @include tablet {
+    margin: 0 0 5px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.presentation__title-big {
+  margin: 0 0 15px;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 69px;
+  letter-spacing: 0.03em;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 71px;
+    margin: 0 0 24px;
+  }
+
+  @include laptop {
+    margin: 0 0 20px;
+  }
+}
+
+.presentation__img {
+  position: absolute;
+  top: -50px;
+  right: 5px;
+  width: 147px;
+  height: 138px;
+
+  @include tablet {
+    width: 356px;
+    height: 381px;
+    top: -75px;
+  }
+
+  @include laptop {
+    width: 480px;
+    height: 474px;
+    right: 115px;
+    top: -124px;
+  }
+
+  @include desktop {
+    width: 555px;
+    height: 549px;
+  }
+}

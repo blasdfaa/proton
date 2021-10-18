@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--header-bg);
+  min-height: 52px;
+  padding: 9px 0;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--header-shadow);
+}
+
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 182px;
+  height: 25px;
+  padding-left: 40px;
+
+  &::before {
+    content: "";
+    width: 34px;
+    height: 34px;
+    background-image: url("../assets/img/header-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+  }
+}

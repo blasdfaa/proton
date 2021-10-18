@@ -1,0 +1,164 @@
+.partners {
+  color: var(--text-color);
+  padding: 60px 0 60px;
+
+  @include tablet {
+    padding: 60px 0 100px;
+  }
+
+  @include laptop {
+    padding: 70px 0 100px;
+  }
+}
+
+.partners__wrapper {
+  @include tablet {
+    align-items: start;
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: 232px 1fr;
+    grid-template-rows: minmax(50px, auto) minmax(48px, auto) auto;
+  }
+
+  @include laptop {
+    grid-template-columns: 295px 1fr;
+  }
+}
+
+.partners__title {
+  font-family: var(--rubik-font);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 47px;
+  margin: 0 0 16px;
+
+  @include tablet {
+    font-size: 42px;
+    line-height: 50px;
+    grid-column: 1 / 2;
+  }
+}
+
+.partners__description {
+  font-family: var(--poppins-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 32px;
+
+  @include tablet {
+    grid-column: 1 / 2;
+  }
+}
+
+.partners__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+    column-gap: 20px;
+    row-gap: 25px;
+    align-items: stretch;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+
+  @include laptop {
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 25px;
+  }
+}
+
+.partners__item {
+  margin-bottom: 55px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    margin: 0;
+    align-self: end;
+  }
+}
+
+.partners__item--binance {
+  @include tablet {
+    align-self: center;
+  }
+}
+
+.partners__item--bitfinex {
+  @include tablet {
+    align-self: center;
+  }
+
+  @include laptop {
+    align-self: end;
+  }
+}
+
+.partners__item--huobi {
+  @include laptop {
+    align-self: center;
+  }
+}
+
+.partners__item--binance .partners__logo{
+  @include tablet {
+    width: 197px;
+    height: 39px;
+  }
+}
+
+.partners__item--huobi .partners__logo{
+  @include tablet {
+    width: 249px;
+    height: 37px;
+  }
+}
+
+.partners__item--okex .partners__logo{
+  @include tablet {
+    width: 172px;
+    height: 55px;
+  }
+}
+
+.partners__item--bitfinex .partners__logo{
+  @include tablet {
+    width: 231px;
+    height: 27px;
+  }
+}
+
+.partners__item--hitbtc .partners__logo{
+  @include tablet {
+    width: 185px;
+    height: 78px;
+  }
+}
+
+.partners__item--bitstamp .partners__logo{
+  @include tablet {
+    width: 153px;
+    height: 35px;
+  }
+}
+
+.partners__link {
+  display: inline-block;
+}
+
+.partners__logo {
+  opacity: 0.7;
+  transition: opacity 0.05s ease-in;
+}
+
+.partners__link:hover .partners__logo,
+.partners__link:focus .partners__logo {
+  opacity: 1;
+}

@@ -1,0 +1,64 @@
+@mixin desktop {
+  @media (min-width: (1440px)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: (1200px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: (1199px)) {
+    @content;
+  }
+}
+
+@mixin btn-reset {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+@mixin burger-btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 34px;
+  height: 26px;
+
+  span {
+    width: 34px;
+    height: 3px;
+    background-color: var(--burger-btn-color);
+    border-radius: 20px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  span:nth-child(3) {
+    position: absolute;
+    top: calc(50% - 1.5px);
+  }
+
+  &:hover span,
+  &:focus span {
+    background-color: var(--burger-btn-hover-color);
+  }
+}
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

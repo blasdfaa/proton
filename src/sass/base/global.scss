@@ -1,0 +1,117 @@
+:root {
+  --color-black: #000000;
+
+  --color-white: #ffffff;
+  --color-white-dark: #fbfbfb;
+  --color-white-darker: #edeeef;
+
+  --color-blue-ribbon: #3355ff;
+  --color-blue-ribbon-light: #4867ff;
+  --color-blue-ribbon-lighter: #3f60fe;
+
+  --color-torea-bay: #122791;
+  --color-torea-bay-light: #1631b6;
+
+  --color-outer-space: #343a40;
+  --color-outer-space-light: #808080;
+  --color-outer-space-lighter: #b8b8b8;
+  --color-outer-space-lighten: #e3e5e6;
+
+  --header-shadow: 0px 0px 34px rgba(208, 208, 208, 0.4);
+
+  --benchmark-shadow: 0px 0px 34px rgba(208, 208, 208, 0.4);
+  --benchmark-bottom-color: #d3d2f3;
+
+  --scope-icon-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  --scope-block-shadow: 0px 0px 34px rgba(0, 0, 0, 0.1);
+
+  --poppins-font: "Poppins", "Arial", sans-serif;
+  --rubik-font: "Rubik", "Arial", sans-serif;
+
+  --header-bg: var(--color-white);
+
+  --section-bg: var(--color-white-dark);
+
+  --text-color: var(--color-outer-space);
+  --text-hover-color: var(--color-blue-ribbon);
+
+  --btn-blue-bg: var(--color-blue-ribbon);
+  --btn-blue-bg-hover: var(--color-torea-bay-light);
+  --btn-blue-bordered-bg: var(--color-blue-ribbon-light);
+  --btn-blue-bordered-bg-hover: var(--color-blue-ribbon-lighter);
+
+  --features-icon-color: var(--color-blue-ribbon);
+
+  --presentation-bg: var(--color-blue-ribbon-light);
+
+  --footer-bg: var(--color-torea-bay);
+  --footer-text-color: var(--color-white);
+
+  --scroll-icon-color: var(--color-blue-ribbon);
+
+  --burger-btn-color: var(--color-black);
+  --burger-btn-hover-color: var(--color-blue-ribbon);
+
+  --input-bg: var(--color-white-darker);
+  --input-border-color: var(--color-outer-space-lighten);
+  --input-hover-border-color: var(--color-torea-bay-light);
+
+  --placeholder-text-color: var(--color-outer-space-light);
+
+  --note-form-text-color: var(--color-outer-space-light);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  min-width: 320px;
+}
+
+.js-menu-open body {
+  overflow: hidden;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.container {
+  min-width: 320px;
+  padding: 0 12px;
+  margin: 0 auto;
+
+  @include laptop {
+    max-width: 1032px;
+  }
+
+  @include desktop {
+    max-width: 1175px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
