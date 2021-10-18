@@ -63,6 +63,10 @@
   }
 }
 
+.feedback-form--sent .feedback-form__wrapper {
+  display: flex;
+}
+
 .feedback-form__alert-message {
   font-family: var(--rubik-font);
   font-size: 40px;
