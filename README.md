@@ -1,4 +1,4 @@
-**[WATCH DEMO](v-zdorovcev.github.io/proton/)**
+**[WATCH DEMO](https://v-zdorovcev.github.io/proton/)**
 
 Run `yarn install` to have dev dependencies installed.
 
