@@ -1,3 +1,5 @@
+**[WATCH DEMO](v-zdorovcev.github.io/proton/)**
+
 Run `yarn install` to have dev dependencies installed.
 
 After having published the app to your remote repo `gh-pages` branch
